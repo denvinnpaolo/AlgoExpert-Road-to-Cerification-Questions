@@ -11,3 +11,15 @@
 
 # Solution 1:
 
+def bubbleSort(array):
+	sorting = False
+	
+	while not sorting:
+		sorting = True
+		for i in range(len(array) - 1):
+			if array[i] > array[i + 1]:
+				array[i], array[i + 1] = array[i + 1], array[i]
+				sorting = False
+		
+				
+	return array
