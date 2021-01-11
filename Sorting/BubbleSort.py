@@ -8,3 +8,5 @@
 
 #   If you're unfamiliar with Bubble Sort, we recommend watching the Conceptual
 #   Overview section of this question's video explanation before starting to code.
+
+# Solution 1:
