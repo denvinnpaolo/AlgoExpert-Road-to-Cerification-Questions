@@ -26,4 +26,18 @@ def caesarCipherEncryptor(string, key):
         
         return ans
 
-        
+# Solution 2:
+	for i in range(len(string)):
+		char = ord(string[i])
+		if key > 26:
+			key = key % 26
+			
+		if key + char > 122:
+			char = chr((char + key - 122) + 96)
+			ans += char
+		else:
+			char += key
+			ans += chr(char)
+			
+	
+	return ans
