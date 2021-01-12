@@ -37,3 +37,35 @@ def threeNumberSum(array, targetSum):
 	return ans
 
 
+# Solution 2:
+	ans = []
+	d ={}
+	
+	for i in range(len(array)):
+		for j in range(len(array)):
+			if i == j:
+				continue
+			
+			num = targetSum - (array[i] + array[j])
+			
+			if num in d:
+				d[num].append([array[i], array[j]])
+			else:
+				d[num] = [[array[i], array[j]]]
+				
+	for i in range(len(array)):
+		if array[i] in d:
+			for j in range(len(d[array[i]])):
+				if array[i] in d[array[i]][j]:
+					continue
+				
+				possible_ans = d[array[i]][j][0] + d[array[i]][j][1] + array[i]
+				
+				if possible_ans == targetSum:
+					d[array[i]][j].append(array[i])
+
+					d[array[i]][j].sort()
+					if d[array[i]][j] not in ans:
+						ans.append(d[array[i]][j])
+	ans.sort()
+	return ans
