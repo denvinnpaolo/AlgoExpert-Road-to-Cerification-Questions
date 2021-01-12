@@ -11,3 +11,19 @@
 
 #   Note that letters should "wrap" around the alphabet; in other words, the
 #   letter "z"  shifted by one returns the letter "a"
+
+# Solution 1:
+
+def caesarCipherEncryptor(string, key):
+    # Write your code here.
+    ans=''
+        for i in range(len(string)):
+            new_letter = ord(string[i]) + key % 26
+            if new_letter > 122:
+                new_letter = new_letter - 26
+            
+            ans+= chr(new_letter)
+        
+        return ans
+
+        
