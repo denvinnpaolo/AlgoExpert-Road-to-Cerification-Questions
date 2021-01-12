@@ -69,3 +69,5 @@ def threeNumberSum(array, targetSum):
 						ans.append(d[array[i]][j])
 	ans.sort()
 	return ans
+
+    
