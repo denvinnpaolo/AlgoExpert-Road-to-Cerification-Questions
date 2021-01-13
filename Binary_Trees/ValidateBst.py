@@ -2,6 +2,9 @@
 # Difficulty: Medium
 
 # Instruction:
+
+
+# Solution:
 class BST:
     def __init__(self, value):
         self.value = value
