@@ -15,3 +15,14 @@
 
 #   Note that you're allowed to mutate the input array.
 
+def firstDuplicateValue(array):
+    # Write your code here.
+    d = {}
+	
+	for i in range (len(array)):
+		if array[i] not in d:
+			d[array[i]] = array[i]
+		elif array[i] in d:
+			return array[i]
+	
+	return -1
