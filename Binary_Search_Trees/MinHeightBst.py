@@ -16,6 +16,7 @@ def minHeightBstHelper(array, left, right):
 
 		
 	return bst
+    
 
 class BST:
     def __init__(self, value):
