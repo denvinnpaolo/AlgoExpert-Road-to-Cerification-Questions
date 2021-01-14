@@ -20,3 +20,12 @@ def preOrderTraverse(tree, array):
 		preOrderTraverse(tree.right, array)
 
 	return array
+
+def postOrderTraverse(tree, array):
+    # Write your code here.
+    if tree is not None:
+		postOrderTraverse(tree.left, array)
+		postOrderTraverse(tree.right, array)
+		array.append(tree.value)
+		
+	return array
