@@ -25,5 +25,7 @@ def maxSubsetSumNoAdjacent(array):
 		
 			
 		return max(maxSums[len(array) - 1], maxSums[len(array)-2])
+        # or
+        return maxSums[-1]
 
 				
