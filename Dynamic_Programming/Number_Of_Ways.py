@@ -1,6 +1,11 @@
 # Number of ways to make change
 # Difficutly: Medium
 
+# Instruction:
+
+#   Given an array of distinct positive integers representing coin denominations and a
+#   single non-negative integer 
+
 # Solution:
 def numberOfWaysToMakeChange(n, denoms):
     # Write your code here.
