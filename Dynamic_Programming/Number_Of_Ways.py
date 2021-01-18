@@ -21,7 +21,8 @@ def numberOfWaysToMakeChange(n, denoms):
 				ways[amount] += ways[amount - denom]
 				
 				
-	return ways[n]
+	return ways [n]
+
 
 	# if n == 0:
 	# 	return 1
