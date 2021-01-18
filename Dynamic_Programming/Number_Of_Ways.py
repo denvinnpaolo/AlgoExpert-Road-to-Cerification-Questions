@@ -11,36 +11,49 @@
 # Solution:
 def numberOfWaysToMakeChange(n, denoms):
     # Write your code here.
-	if n == 0:
-		return 1
-	if len(denoms) == 1:
-		if n % denoms[0] == 0:
-			return 1
-		else:
-			return 0
-	ans = 0
-	d= {}
-	a= []
-	multiplier = 1
-	
-	for i in range(len(denoms)):
-		while denoms[i] * multiplier <= n:
-			num = denoms[i] * multiplier
-			d[num] = num
-			if num not in a:
-				a.append(num)
-				
-			multiplier += 1
-		multiplier = 1
 
-	for i in range(len(denoms)):
-		while denoms[i] * multiplier <= n:
-			num = n - denoms[i] * multiplier 
-			multiplier += 1
-			if num in d:
-				ans += 1
+	ways = [0 for amount in range(n + 1)]
+	ways[0] = 1
+	
+	for denom in denoms:
+		for amount in range(1, n +1):
+			if denom <= amount:
+				ways[amount] += ways[amount - denom]
 				
-		multiplier = 1
+				
+	return ways[n]
+
+	# if n == 0:
+	# 	return 1
+	# if len(denoms) == 1:
+	# 	if n % denoms[0] == 0:
+	# 		return 1
+	# 	else:
+	# 		return 0
+
+	# ans = 0
+	# d= {}
+	# a= []
+	# multiplier = 1
+	
+	# for i in range(len(denoms)):
+	# 	while denoms[i] * multiplier <= n:
+	# 		num = denoms[i] * multiplier
+	# 		d[num] = num
+	# 		if num not in a:
+	# 			a.append(num)
+				
+	# 		multiplier += 1
+	# 	multiplier = 1
+
+	# for i in range(len(denoms)):
+	# 	while denoms[i] * multiplier <= n:
+	# 		num = n - denoms[i] * multiplier 
+	# 		multiplier += 1
+	# 		if num in d:
+	# 			ans += 1
+				
+	# 	multiplier = 1
 
 
     # if n == 0:
