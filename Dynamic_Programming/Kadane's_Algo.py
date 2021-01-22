@@ -8,3 +8,4 @@
 #   non-empty subarray of the input array. A subarray must only contain adjacent
 #   numbers (numbers next to each other in the input array).
 
+# Solution:
