@@ -16,3 +16,5 @@ def RemoveDuplicateFromLinkedList(linkedList):
         cur = cur.next
 
     return linkedList
+
+    
